@@ -12,6 +12,9 @@ body{
     min-height: 100vh;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+body.hot{
+    background-image: url('../img/pexels-landi-estrefi-1861810515-28553463.jpg');
+}
 h1{
     text-align: center;
     font-size: 3rem;

@@ -45,7 +45,7 @@ const inputChanger = () => {
 
   if (inputValue&&methodValue) {
     const resultToResult = converse (inputValue, methodValue);
-    
+    decideTemp(inputValue, methodValue);
       if (resultToResult){
         result.textContent = resultToResult;
     }
@@ -55,20 +55,32 @@ const inputChanger = () => {
   }
 };
 
-/*const decideTemp = () => {
-if (methodValue = 1 || methodValue = 2) {
-  const temperatureInCelsius = inputValue; 
+const decideTemp = (inputValue, methodValue) => {
 
-} else if (methodValue = 3 || methodValue = 4) {
-  const temperatureInCelsius = (inputValue - 32) / 1.8; 
+  let temperatureInCelsius;
 
-} else if (methodValue = 5 || methodValue = 6) {
-  const temperatureInCelsius = inputValue - 273.15; 
+if (methodValue == 1 || methodValue == 2) {
+  temperatureInCelsius = inputValue; 
+
+} else if (methodValue == 3 || methodValue == 4) {
+  temperatureInCelsius = (inputValue - 32) / 1.8; 
+
+} else if (methodValue == 5 || methodValue == 6) {
+  temperatureInCelsius = inputValue - 273.15; 
+
+
+}
+if (temperatureInCelsius >= 25){
+  document.body.classList.add ("hot")
+}
+else {
+  document.body.classList.remove ("hot")
+}
 }
 
-}
-*/
 
-input.addEventListener('input', inputChanger);
-method.addEventListener('input', inputChanger);
+
+
+input.addEventListener('input', inputChanger, decideTemp);
+method.addEventListener('input', inputChanger, decideTemp);
 
