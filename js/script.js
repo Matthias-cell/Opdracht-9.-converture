@@ -1,8 +1,11 @@
-let input = document.getElementById("userInput")
+let input = document.getElementById("userInput") 
+//TODO Gebruik puntkomma om statements af te sluiten.
 let method = document.getElementById("conversion")
 let result = document.getElementById("result")
+//TODO Namen variabelen betekenisvoller maken bv. inputTempElement, inputMethodElement, ouputTempElement
+// TODO Gebruik steeds cons, enkel wanneer waarde zal wijzigen let
 
-const converse = (ChosenInput, ChosenMethod) => {
+const converse = (ChosenInput, ChosenMethod) => { //TODO Gebruik camelCase -> chosenInput
   let solution;
 
   switch(ChosenMethod){
@@ -50,7 +53,7 @@ const inputChanger = () => {
         result.textContent = resultToResult;
     }
     else {
-    result.textContent = "";
+    result.textContent = ""; //TODO Laat code correct inspringen.
     }
   }
 };
@@ -79,7 +82,7 @@ else {
 }
 
 
-
+//TODO Vermijd onnodig lege regels
 
 input.addEventListener('input', inputChanger, decideTemp);
 method.addEventListener('input', inputChanger, decideTemp);
